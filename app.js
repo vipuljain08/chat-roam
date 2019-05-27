@@ -39,12 +39,8 @@ const alluser = []
 
 io.on('connection', (socket) => {
     console.log('New User Connected')
-
     socket.username = username
     alluser.push(username)
-    // console.log(socket.username)
-    // users.push(socket.username)
-    // console.log(users)
     socket.emit('new_user', {message : `${alluser}` })
 
     socket.on('username', (data) => {

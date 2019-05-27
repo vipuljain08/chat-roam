@@ -22,12 +22,6 @@ $(function(){
         chatroom.append(`<p class="message"> ${data.username}  : ${data.message} </p>`)
     })
     
-  //   // emit username
-  //   // send_username.click(function(){
-	// 	// socket.emit('change_username', {username : username.val()})
-	// 	// //console.log(username.val())
-  //   // })  
-    
   //   //Emit typing
 	message.bind("keypress", (e) => {
     socket.emit('typing')
@@ -41,17 +35,11 @@ $(function(){
 	socket.on('typing', (data) => {
         feedback.html(`<p><i> ${data.username} is typing a message... </i></p>`)
   })
-  // socket.on('username', (data) => {
-  //   username.innerText = data.message
-  // })
-  // socket.emit('username')
-  // socket.on('username', (data) => {
-  //   console.log(data.username)
-  // })
+  
   socket.emit('new_user')
   
   socket.on('new_user', (data) => {
-    console.log(data.message)
+    // console.log(data.message)
     let users = [...data.message.split(',')]
     userOnline.innerHTML = ''
     for(let user of users) {
