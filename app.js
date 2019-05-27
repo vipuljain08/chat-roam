@@ -35,15 +35,18 @@ server = app.listen(8000)
 
 // socket.io instantiation
 const io = require("socket.io")(server)
-
+const alluser = []
 
 io.on('connection', (socket) => {
     console.log('New User Connected')
 
     socket.username = username
+    alluser.push(username)
     // console.log(socket.username)
     // users.push(socket.username)
     // console.log(users)
+    socket.emit('new_user', {message : `${alluser}` })
+
     socket.on('username', (data) => {
         socket.broadcast.emit('username', {username : socket.username})
     })

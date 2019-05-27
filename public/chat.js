@@ -9,7 +9,7 @@ $(function(){
     var chatroom = $("#chatroom")
     var feedback = $("#feedback")
     var container1 = $(".container1")
-
+    var userOnline = $(".user-online")
     // emit message
     send_message.click(function(){
         socket.emit('new_message', {message : message.val()})
@@ -49,11 +49,13 @@ $(function(){
   //   console.log(data.username)
   // })
   socket.emit('new_user')
-  // socket.on('new_user', (data) => {
-  //   feedback.html(`<p><i> ${data.message} </i></p>`)
-  // })
+  
   socket.on('new_user', (data) => {
     console.log(data.message)
-    container1.append(`<div class="card card1">${data.message}</div>`)
+    let users = [...data.message.split(',')]
+    userOnline.innerHTML = ''
+    for(let user of users) {
+      userOnline.append(`<div class="card card1">${user}</div>`)
+    }
   })
 })
