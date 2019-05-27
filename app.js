@@ -31,7 +31,7 @@ app.post('/login', (req, res) => {
 })
 
 // listen on port 8000
-server = app.listen(8000)
+server = app.listen(process.env.PORT || 8000)
 
 // socket.io instantiation
 const io = require("socket.io")(server)
@@ -63,3 +63,4 @@ io.on('connection', (socket) => {
     })
 
 })
+    
