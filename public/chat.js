@@ -1,4 +1,4 @@
-$(function(){
+(function(){
     var socket = io.connect('/')
     // buttons and inputs
     var message = $("#message")
