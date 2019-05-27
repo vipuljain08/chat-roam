@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inside Chat App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme|Bree+Serif|Lobster">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container1">
+            <header>
+                <span id="profile-photo"></span>
+                <span id="username">Online Users</span>
+                <span id="menu">&#8594</span>
+            </header>
+            <!-- <div class="card user-online"></div> -->
+        </div>
+        <div class="container2">
+            <!-- <h1>Start Chat here ...</h1> -->
+            <section id="chatroom">
+                <section id="feedback"></section>
+            </section>
+            <section id="input_msg">
+                <input id="message" type="text" placeholder="Start Messaging" name="msg">
+                <button id="send_message" type="button">Send -></button>
+            </section>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="chat.js"></script>
+</body>
+
+</html>

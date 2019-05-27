@@ -1,0 +1,159 @@
+    * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #wrapper {
+            width: 100%;
+            height: 100vh;
+            background: #000;
+        }
+
+        .container1 {
+            float: left;
+            width: 30%;
+            height: 100vh;
+            background: #fff;
+        }
+
+        .container2 {
+            float: right;
+            width: 70%;
+            height: 100vh;
+            background: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        header {
+            background: silver;
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #profile-photo {
+            margin-left: 10px;
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            background: crimson;
+        }
+
+        #username {
+            font: 500 24px 'Acme', cursive;
+            letter-spacing: 2px;
+        }
+
+        #menu {
+            font: 700 34px cursive;
+            color: brown;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 10%;
+            background: coral;
+            border-bottom: 1px solid #fff;
+            font: 500 24px 'Acme', cursive;
+            text-align: center;
+        }
+
+        .user-online {
+            background: chocolate;
+        }
+
+        h1 {
+            font-family: 'Lobster', cursive;
+            letter-spacing: 3px;
+        }
+
+        #input_msg {
+            position: relative;
+            width: 100%;
+            height: 8%;
+            bottom: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #message {
+            width: 90%;
+            height: 100%;
+            font-size: 24px;
+            font-family: 'Markazi Text', serif;
+            /* border: 5px solid crimson; */
+            /* padding-left: 12px; */
+        }
+
+        #send_message {
+            width: 10%;
+            height: 100%;
+            background: blue;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-family: 'Operator Mono';
+            border: 2px solid blue;
+        }
+
+        #send_message:hover {
+            opacity: 0.6;
+            transition: .4s linear;
+        }
+
+        #chatroom {
+            width: 100%;
+            height: 92%;
+            margin-top: 2%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            overflow: auto;
+        }
+
+        p {
+            width: 50%;
+            height: 50px;
+            margin-left: 10%;
+            margin-bottom: 3%;
+            font: 500 24px 'Acme', cursive;
+            letter-spacing: 1px;
+            border-radius: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #feedback p {
+            background: lightgray;
+            color: #000;
+        }
+
+        p:nth-of-type(odd) {
+            background: #4776E6;
+            color: #fff;
+        }
+
+        p:nth-of-type(even) {
+            background: #fff;
+            color: #4776E6;
+            transform: translateX(60%);
+        }
